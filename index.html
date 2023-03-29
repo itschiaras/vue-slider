@@ -28,7 +28,11 @@
             <div class="slider">
                 <div class="slide active">
                     <img :src="images[activeIndex].image" :alt="images[activeIndex].title">
-                    <div class="titlebox">{{images[activeIndex].title}}</div>
+                    <div class="titlebox d-flex flex-column">
+                        {{images[activeIndex].title}}
+                        <div class="small-text">{{images[activeIndex].text}}</div>
+                    </div>
+                    
                 </div>
                 
                 <button class="previous" @click="prevImage">
