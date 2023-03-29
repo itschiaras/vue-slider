@@ -31,10 +31,10 @@
                     <div class="titlebox">{{images[activeIndex].title}}</div>
                 </div>
                 
-                <button class="previous">
+                <button class="previous" @click="prevImage">
                     <i class="fa-solid fa-chevron-circle-left"></i>
                 </button>
-                <button class="next">
+                <button class="next" @click="nextImage">
                     <i class="fa-solid fa-chevron-circle-right"></i>
                 </button>
 
