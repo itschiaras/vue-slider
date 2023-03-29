@@ -19,7 +19,8 @@
 
         <div class="wrapper w-50 mx-auto vh-100 d-flex justify-content-center align-items-center flex-column"  @mouseover="stopAutoPlay" @mouseout="startAutoPlay">
             <div class="thumbnails d-flex justify-content-around mb-2">
-                <div class="thumbnail" :class="{'active': activeIndex === index}" v-for="(image, index) in images" :key="index">
+                <div class="thumbnail" :class="{'active': activeIndex === index}" v-for="(image, index) in images" :key="index"
+                @click="activeIndex = index">
                     <img class="image-slide" :src="image.image" :alt="image.title">
                 </div>
 

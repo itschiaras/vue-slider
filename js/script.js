@@ -44,6 +44,7 @@ createApp({
         stopAutoPlay() {
             clearInterval(this.myInterval);
         }
+        
     },
     mounted() {
         this.startAutoPlay();
