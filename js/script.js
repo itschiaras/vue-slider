@@ -36,8 +36,12 @@ createApp({
         goNext() {
             this.activeIndex === this.images.length -1 ? this.activeIndex = 0 : this.activeIndex++;
         },
-        
+        startAutoPlay() {
+            setInterval(this.goNext, 1000);
+        }
     },
-    
+    mounted() {
+        this.startAutoPlay();
+    }
 
 }).mount('#app')
