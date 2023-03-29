@@ -27,6 +27,7 @@ createApp({
                 }
             ],
             activeIndex: 0,
+            myInterval: ''
             
         }
     },
@@ -38,10 +39,10 @@ createApp({
             this.activeIndex === this.images.length -1 ? this.activeIndex = 0 : this.activeIndex++;
         },
         startAutoPlay() {
-            let myInterval = setInterval(this.goNext, 1000);
+            this.myInterval = setInterval(this.goNext, 1000);
         },
         stopAutoPlay() {
-            clearInterval(myInterval);
+            clearInterval(this.myInterval);
         }
     },
     mounted() {
