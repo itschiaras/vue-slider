@@ -17,7 +17,7 @@
 <body>
     <div id="app">
 
-        <div class="wrapper w-100 vh-100 d-flex justify-content-center align-items-center flex-column">
+        <div class="wrapper w-50 mx-auto vh-100 d-flex justify-content-center align-items-center flex-column"  @mouseover="stopAutoPlay" @mouseout="startAutoPlay">
             <div class="thumbnails d-flex justify-content-around mb-2">
                 <div class="thumbnail" :class="{'active': activeIndex === index}" v-for="(image, index) in images" :key="index">
                     <img class="image-slide" :src="image.image" :alt="image.title">
@@ -25,7 +25,7 @@
 
 
             </div>
-            <div class="slider" @mouseover="stopAutoPlay" @mouseout="startAutoPlay">
+            <div class="slider">
                 <div class="slide active">
                     <img :src="images[activeIndex].image" :alt="images[activeIndex].title">
                     <div class="titlebox d-flex flex-column">
